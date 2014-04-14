@@ -42,16 +42,15 @@ content required to appear in all GSICS netCDF files of one product type,
 in this case the GEO-LEO-IR.
 
 The producer-specific content is validated with the rules found in the
-`gsics-nesdis-geoleoir.sch` and `gsics-jma-geoleoir.sch` files. These two
-files also import all the tests from the `gsics-geoleoir-common.sch` file
-so they are the only Schematron files that need to be used for complete
-validation of GSICS netCDF files from particular data producer.
+`gsics-nesdis-geoleoir.sch` (for NESDIS) and `gsics-jma-geoleoir.sch` (for
+JMA) files. These two files also import all the tests from the
+`gsics-geoleoir-common.sch` file so they are the only Schematron files
+needed for complete validation of GSICS netCDF files from a particular data
+producer.
 
 In order to use producer-specific Schematron files for conformance testing
 they need to be translated into XSLT 2.0 statements. This is the task of
 the `sch2xslt.sh` bash script. Once the Schematron rules are translated,
 the `validate.sh` bash script performs the actual validation. For more
-detailed information on how to use these scripts run them with the `-h`
+detailed information on how to use these scripts invoke them with the `-h`
 option.
-
-
